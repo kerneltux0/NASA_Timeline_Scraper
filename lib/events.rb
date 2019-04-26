@@ -1,3 +1,20 @@
+# Copyright 2019, Ryan Sise
+
+# This file is part of NASA Timeline Scraper.
+
+# NASA Timeline Scraper is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# NASA Timeline Scraper is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with NASA Timeline Scraper.  If not, see <https://www.gnu.org/licenses/>.
+
 class NASATimelineScraper::Events
   attr_accessor :headline, :date, :description
   @@events = []
@@ -24,9 +41,3 @@ class NASATimelineScraper::Events
   # end
   
 end
-
-# test data
-# event_1 = NASATimelineScraper::Events.new(headline, date, description)
-# event_1.headline = "Soviet Union Launches Sputnik 2"
-# event_1.date = "Nov 3 1957"
-# event_1.description = The Soviet Union went on to launch a series of additional Sputnik satellites. Sputnik 2, for example, carried a dog into space, named Laika....
