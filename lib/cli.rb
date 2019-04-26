@@ -48,16 +48,16 @@ class NASATimelineScraper::CLI
   end
 
   def second_menu
+    #iterates through NASATimelineScraper::Events.events & prints list
     puts "Which event do you want to know more about?"
-    #iterates through NASATimelineScraper::Events.events
-    #prints list & opens complete article on that event in user's browser
+    #opens complete article on that event in user's browser
 
   end
 
   def goodbye
+    #iterates through NASATimelineScraper::Events.events & prints list
     puts "Thank you for checking out a snapshot of NASA's history!"
-    #iterates through NASATimelineScraper::Events.events
-    #prints list & opens complete article on that event in user's browser
+    #opens complete article on that event in user's browser
 
   end
 
