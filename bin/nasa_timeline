@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+NASA_Timeline_Scraper::CLI.new.call
