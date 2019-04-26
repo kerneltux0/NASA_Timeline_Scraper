@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/NASA_Timeline_Scraper'
+require "bundler/setup"
+require "NASA_Timeline_Scraper"
 
 NASATimelineScraper::CLI.new.call
