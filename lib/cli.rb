@@ -37,21 +37,16 @@ class NASATimelineScraper::CLI
     puts "Please enter one of the following:"
     puts "The number matching what you want to see"
     puts "'menu' to return to the main menu"
-    puts "'list' to see the list"
     puts "'exit' to exit"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
       case input
-      when "list"
-        puts "This is the list"
       when "1"
-        # puts "Al-onsey!"
         url = "https://worldhistoryproject.org/topics/nasa"
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "2"
-        # puts "Reversing the polarity of the neutron flow."
         url = "https://worldhistoryproject.org/topics/nasa/page/2"
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
@@ -65,8 +60,8 @@ class NASATimelineScraper::CLI
   end
 
   def second_menu
-    NASATimelineScraper::Events.events.each do |something|
-      binding.pry
+    NASATimelineScraper::Events.events.each.with_index(1) do |event,index|
+      puts "#{index}: #{event.headline}--#{event.date}"
     end
     puts "Which event do you want to know more about?"
     #opens complete article on that event in user's browser
