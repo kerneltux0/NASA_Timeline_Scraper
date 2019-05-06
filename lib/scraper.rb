@@ -18,10 +18,13 @@
 class NASATimelineScraper::ScrapePg1
   #calls on Nokogiri & open-uri to parse years 1957-1983
   def self.scrape_pg1(url)
+    site = "https://worldhistoryproject.org"
     nasaSite = Nokogiri::HTML(open(url))
-    nasaSite.css("li.media.event").each do |something|
-      #headline = something.css("h3").text.strip
-      #date = something.css("time").text.strip
+    nasaSite.css("li.media.event").each do |events|
+      #headline = events.css("h3").text.strip
+      #date = events.css("time").text.strip
+      #page = events.css("a").attribute("href").value
+      site += page
       binding.pry
     end
   end
