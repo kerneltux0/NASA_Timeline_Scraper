@@ -44,10 +44,12 @@ class NASATimelineScraper::CLI
       case input
       when "1"
         url = "https://worldhistoryproject.org/topics/nasa"
+        NASATimelineScraper::Events.delete_events
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "2"
         url = "https://worldhistoryproject.org/topics/nasa/page/2"
+        NASATimelineScraper::Events.delete_events
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "menu"
