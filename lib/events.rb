@@ -19,10 +19,10 @@ class NASATimelineScraper::Events
   attr_accessor :headline, :date, :description
   @@events = []
 
-  def initialize(headline, date, description)
+  def initialize(headline, date, url)
     @headline = headline
     @date = date
-    @description = description
+    @url = url
     save
 
   end
