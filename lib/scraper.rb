@@ -26,9 +26,9 @@ class NASATimelineScraper::ScrapePage
       date = events.css("time").text.strip
       page = events.css("a").attribute("href").value
       site << page
-      binding.pry
+      NASATimelineScraper::Events.new(headline, date, site)
+      # binding.pry
     end
-    #NASATimelineScraper::Events.new(headline, date, site)
   end
   
 end
