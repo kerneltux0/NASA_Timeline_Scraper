@@ -19,6 +19,11 @@ class NASATimelineScraper::ScrapePg1
   #calls on Nokogiri & open-uri to parse years 1957-1983
   def self.scrape_pg1(url)
     nasaSite = Nokogiri::HTML(open(url))
+    nasaSite.css("li.media.event").each do |something|
+      #headline = something.css("h3").text.strip
+      #date = something.css("time").text.strip
+      binding.pry
+    end
   end
   
 end
