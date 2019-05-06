@@ -46,12 +46,12 @@ class NASATimelineScraper::CLI
       when "list"
         puts "This is the list"
       when "1"
-        puts "Al-onsey!"
+        # puts "Al-onsey!"
         url = "https://worldhistoryproject.org/topics/nasa"
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "2"
-        puts "Reversing the polarity of the neutron flow."
+        # puts "Reversing the polarity of the neutron flow."
         url = "https://worldhistoryproject.org/topics/nasa/page/2"
         NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
@@ -65,7 +65,9 @@ class NASATimelineScraper::CLI
   end
 
   def second_menu
-    #iterates through NASATimelineScraper::Events.events & prints list
+    NASATimelineScraper::Events.events.each do |something|
+      binding.pry
+    end
     puts "Which event do you want to know more about?"
     #opens complete article on that event in user's browser
 
