@@ -36,8 +36,8 @@ class NASATimelineScraper::Events
     @@events << self
   end
 
-  # def add_event(something)
-
-  # end
+  def self.delete_events
+    @@events.clear
+  end
   
 end
