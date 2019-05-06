@@ -48,12 +48,12 @@ class NASATimelineScraper::CLI
       when "1"
         puts "Al-onsey!"
         url = "https://worldhistoryproject.org/topics/nasa"
-        NASATimelineScraper::ScrapePg1.scrape_pg1(url)
+        NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "2"
         puts "Reversing the polarity of the neutron flow."
         url = "https://worldhistoryproject.org/topics/nasa/page/2"
-        #NASATimelineScraper::ScrapePg2.scrape_pg2(url)
+        NASATimelineScraper::ScrapePage.scrape(url)
         second_menu
       when "menu"
         main_menu
