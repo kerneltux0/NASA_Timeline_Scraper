@@ -15,36 +15,20 @@
 # You should have received a copy of the GNU General Public License
 # along with NASA Timeline Scraper.  If not, see <https://www.gnu.org/licenses/>.
 
-class NASATimelineScraper::ScrapePg1
+class NASATimelineScraper::ScrapePage
   #calls on Nokogiri & open-uri to parse years 1957-1983
-  def self.scrape_pg1(url)
-    site = "https://worldhistoryproject.org"
+  def self.scrape(url)
+    # site = "https://worldhistoryproject.org"
     nasaSite = Nokogiri::HTML(open(url))
     nasaSite.css("li.media.event").each do |events|
-      headline = events.css("h3").text.strip
-      date = events.css("time").text.strip
-      page = events.css("a").attribute("href").value
-      site << page
-      # binding.pry
-    end
-    #NASATimelineScraper::Events.new(headline, date, site)
-  end
-  
-end
-
-class NASATimelineScraper::ScrapePg2
-  #calls on Nokogiri & open-uri to parse years 1986-2012
-
-  def self.scrape_pg2(url)
-    site = "https://worldhistoryproject.org"
-    nasaSite = Nokogiri::HTML(open(url))
-    nasaSite.css("li.media.event").each do |events|
+      site = "https://worldhistoryproject.org"
       headline = events.css("h3").text.strip
       date = events.css("time").text.strip
       page = events.css("a").attribute("href").value
       site << page
       binding.pry
     end
+    #NASATimelineScraper::Events.new(headline, date, site)
   end
-
+  
 end
