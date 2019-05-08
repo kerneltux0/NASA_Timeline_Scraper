@@ -66,7 +66,6 @@ class NASATimelineScraper::CLI
       puts "#{index}: #{event.headline}--#{event.date}"
     end
     puts "Which event do you want to know more about?"
-    #opens complete article on that event in user's browser
 
   end
 
