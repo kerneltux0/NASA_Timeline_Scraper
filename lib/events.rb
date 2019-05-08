@@ -16,7 +16,7 @@
 # along with NASA Timeline Scraper.  If not, see <https://www.gnu.org/licenses/>.
 
 class NASATimelineScraper::Events
-  attr_accessor :headline, :date, :description
+  attr_accessor :headline, :date, :url
   @@events = []
 
   def initialize(headline, date, url)
