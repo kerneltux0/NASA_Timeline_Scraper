@@ -30,5 +30,10 @@ class NASATimelineScraper::ScrapePage
       # binding.pry
     end
   end
+
+  def self.scrape_article(url)
+    article = Nokogiri::HTML(open(url))
+    article.css("div.event-description p").text
+  end
   
 end
