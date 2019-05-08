@@ -1,6 +1,7 @@
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'launchy'
 require_relative "./NASA_Timeline_Scraper/version"
 require_relative "./cli.rb"
 require_relative "./scraper.rb"
