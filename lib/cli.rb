@@ -66,13 +66,17 @@ class NASATimelineScraper::CLI
       puts "#{index}: #{event.headline}--#{event.date}"
     end
     puts "Which event do you want to know more about?"
+    #binding.pry
+    input = gets.strip
+    if input.to_i == NASATimelineScraper::Events.events[input.to_i-1]
+      binding.pry
+      NASATimelineScraper::ScrapePage.scrape_article(event.url)
+    end
 
   end
 
   def goodbye
-    #iterates through NASATimelineScraper::Events.events & prints list
     puts "Thank you for checking out a snapshot of NASA's history!"
-    #opens complete article on that event in user's browser
 
   end
 
