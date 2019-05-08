@@ -20,7 +20,6 @@ class NASATimelineScraper::CLI
   def call
     main_menu
     user_options
-    goodbye
 
   end
 
@@ -54,6 +53,8 @@ class NASATimelineScraper::CLI
         second_menu
       when "menu"
         main_menu
+      when "exit"
+        goodbye
       else
         puts "Invalid input, please try again."
       end
@@ -67,11 +68,12 @@ class NASATimelineScraper::CLI
     end
     puts "Which event do you want to know more about?"
     #binding.pry
-    input = gets.strip
-    if input.to_i == NASATimelineScraper::Events.events[input.to_i-1]
-      binding.pry
-      NASATimelineScraper::ScrapePage.scrape_article(event.url)
-    end
+    nasa_events = NASATimelineScraper::Events.events
+
+    # binding.pry
+    answer = gets.strip
+    system("xdg-open '#{nasa_events[answer.to_i].url}'")
+    main_menu
 
   end
 
