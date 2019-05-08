@@ -40,4 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
   spec.add_runtime_dependency "nokogiri"
+  spec.add_runtime_dependency "launchy"
 end
