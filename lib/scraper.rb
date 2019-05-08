@@ -16,9 +16,7 @@
 # along with NASA Timeline Scraper.  If not, see <https://www.gnu.org/licenses/>.
 
 class NASATimelineScraper::ScrapePage
-  #calls on Nokogiri & open-uri to parse years 1957-1983
   def self.scrape(url)
-    # site = "https://worldhistoryproject.org"
     nasaSite = Nokogiri::HTML(open(url))
     nasaSite.css("li.media.event").each do |events|
       site = "https://worldhistoryproject.org"
@@ -27,13 +25,6 @@ class NASATimelineScraper::ScrapePage
       page = events.css("a").attribute("href").value
       site << page
       NASATimelineScraper::Events.new(headline, date, site)
-      # binding.pry
     end
   end
-
-  def self.scrape_article(url)
-    article = Nokogiri::HTML(open(url))
-    article.css("div.event-description p").text
-  end
-  
 end
