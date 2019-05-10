@@ -1,12 +1,10 @@
 # NASATimelineScraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/NASA_Timeline_Scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This scrapes the media events from the NASA section of worldhistoryproject.org, presents them in list format & opens the selected event in the user's default browser.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Either clone this repo, or add this line to your application's Gemfile:
 
 ```ruby
 gem 'NASA_Timeline_Scraper'
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To access the user-facing menu, run the nasa_timeline file that's located in the bin directory.
 
 ## Development
 
