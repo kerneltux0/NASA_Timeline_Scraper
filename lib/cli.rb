@@ -73,6 +73,7 @@ class NASATimelineScraper::CLI
     # binding.pry
     answer = gets.strip
     system("xdg-open '#{nasa_events[answer.to_i].url}'")
+    system("clear")
     main_menu
 
   end
