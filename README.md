@@ -4,19 +4,7 @@ This scrapes the media events from the NASA section of worldhistoryproject.org, 
 
 ## Installation
 
-Either clone this repo, or add this line to your application's Gemfile:
-
-```ruby
-gem 'NASA_Timeline_Scraper'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install NASA_Timeline_Scraper
+Clone this repo, and run bundle install to load all dependencies.
 
 ## Usage
 
